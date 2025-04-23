@@ -32,11 +32,7 @@ This is a punnet square of the flags, But the outputs are unexpected
 |-------------------|-----------------------|-------------|
 
 
-N|Y|${HOME}|.zshrc .p10k.zsh|zsh oh-my-zsh-git zsh-theme-powerlevel10k pokemon-colorscripts-git
-N|Y|${HOME}/.config/Code/User|settings.json|visual-studio-code-bin
-N|Y|${HOME}/.config/Code - OSS/User|settings.json|code
-N|Y|${HOME}/.config|code-flags.conf|visual-studio-code-bin
-N|Y|${HOME}/.config|code-flags.conf|code
+N|Y|${HOME}|.zshrc .p10k.zsh|zsh oh-my-zsh-git zsh-theme-powerlevel10k
 N|Y|${HOME}/.config|spotify-flags.conf|spotify
 Y|Y|${HOME}/.config|dunst|dunst
 N|Y|${HOME}/.config|fish|fish
@@ -53,7 +49,6 @@ Y|Y|${HOME}/.config|fastfetch|fastfetch
 Y|Y|${HOME}/.config|qt5ct|qt5ct
 Y|Y|${HOME}/.config|qt6ct|qt6ct
 Y|Y|${HOME}/.config|rofi|rofi
-Y|Y|${HOME}/.config|swaylock|swaylock-effects
 Y|Y|${HOME}/.config/waybar|modules config.jsonc style.css theme.css|waybar
 N|Y|${HOME}/.config/waybar|config.ctl|waybar
 Y|Y|${HOME}/.config|wlogout|wlogout

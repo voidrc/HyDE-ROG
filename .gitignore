@@ -4,6 +4,4 @@ user
 Scripts/pkg_black.lst
 Scripts/pkg_user.lst
 *__pycache__*
-Scripts/pkg_black.lst
-Scripts/pkg_user.lst
 .qodo

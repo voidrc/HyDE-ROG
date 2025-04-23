@@ -52,8 +52,6 @@ O|${HOME}/.local/share|hyde|hyprland
 O|${HOME}/.local/lib|hyde|hyprland
 
  Editor 
-P|${HOME}/.config/Code - OSS/User|settings.json|code
-P|${HOME}/.config/Code/User|settings.json|visual-studio-code-bin
 P|${HOME}/.config/VSCodium/User|settings.json|vscodium
 
  Bar 
@@ -70,7 +68,7 @@ P|${HOME}/.config/kitty|kitty.conf|kitty
 
  Shell 
 P|${HOME}/.config|fish|fish
-P|${HOME}|.zshrc .hyde.zshrc .p10k.zsh|zsh zsh-theme-powerlevel10k pokego-bin
+P|${HOME}|.zshrc .hyde.zshrc .p10k.zsh|zsh zsh-theme-powerlevel10k
 S|${HOME}|.zshenv|zsh zsh-theme-powerlevel10k
 
  File Explorer 
@@ -88,8 +86,6 @@ P|${HOME}/.config|libinput-gestures.conf|libinput-gestures
 
  Wayland 
 P|${HOME}/.config|spotify-flags.conf|spotify
-P|${HOME}/.config|code-flags.conf|code
-P|${HOME}/.config|code-flags.conf|visual-studio-code-bin
 P|${HOME}/.config|vscodium-flags.conf|vscodium
 P|${HOME}/.config|electron-flags.conf|electron
 
@@ -104,7 +100,6 @@ P|${HOME}/.config|rofi|rofi
 S|${HOME}/.config|wlogout|wlogout
 
  Lock Screen 
-S|${HOME}/.config|swaylock|swaylock-effects
 P|${HOME}/.config/hypr|hyprlock.conf|hyprlock
 S|${HOME}/.config/hypr|hyprlock|hyprlock
 
