@@ -16,6 +16,12 @@ blueman                                                # bluetooth manager gui
 brightnessctl                                          # screen brightness control
 udiskie                                                # manage removable media
 
+# --------------------------------------------------- // Rog Compability
+power-profiles-daemon
+asusctl
+supergfxctl
+rog-control-center
+
 # --------------------------------------------------- // Display Manager
 sddm                                                   # display manager for KDE plasma
 qt5-quickcontrols                                      # for sddm theme ui elements
