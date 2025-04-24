@@ -305,6 +305,8 @@ EOF
 fi
 
 if [ $flg_Install -eq 1 ]; then
+    sudo pacman -Rns $(pacman -Qtdq) --noconfirm
+    sudo pacman -Scc --noconfirm
     print_log -stat "\nInstallation" "completed"
 fi
 print_log -stat "Log" "View logs at ${cacheDir}/logs/${HYDE_LOG}"

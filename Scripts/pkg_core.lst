@@ -16,6 +16,9 @@ blueman                                                # bluetooth manager gui
 brightnessctl                                          # screen brightness control
 udiskie                                                # manage removable media
 
+fakeroot                                               # needed to fix issue with installation of aur
+debugedit                                              # this too for aur
+
 # --------------------------------------------------- // Rog Compability
 power-profiles-daemon
 asusctl
