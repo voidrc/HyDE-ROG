@@ -240,7 +240,7 @@ EOF
         hyprctl keyword misc:disable_autoreload 1 -q
     fi
 
-    "${scrDir}/restore_fnt.sh"
+    "${scrDir}/restore_fnt.sh" 
     "${scrDir}/restore_cfg.sh"
     "${scrDir}/restore_thm1.sh"
     rm -rf "$HOME/.cache/hyde/themepatcher"

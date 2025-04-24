@@ -25,9 +25,6 @@ alias tmux='tmux -u'
 # alias to show the date
 alias da='date "+%Y-%m-%d %A %T %Z"'
 
-# alias to copy file content to clipboard
-alias cpc='xclip < '
-
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -133,7 +130,7 @@ alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+besta
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 
 #clear
-alias clear="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
+alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
 
 #search content with ripgrep
 alias rg="rg --sort path"

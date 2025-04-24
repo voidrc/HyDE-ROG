@@ -29,11 +29,11 @@ B = Backup - Backup the target
 
 
  Hyde core files 
-P|${HOME}/.config/hyde|config.toml|hyprland
-P|${HOME}/.config/hypr|hyde.conf workflows.conf animations.conf windowrules.conf keybindings.conf userprefs.conf monitors.conf|hyprland
-P|${HOME}/.config/hypr|nvidia.conf|hyprland nvidia-utils
-P|${HOME}/.config/hypr/themes|theme.conf wallbash.conf colors.conf|hyprland
-P|${HOME}/.local/state/hyde|hyprland.conf|hyprland
+S|${HOME}/.config/hyde|config.toml|hyprland
+S|${HOME}/.config/hypr|hyde.conf workflows.conf animations.conf windowrules.conf keybindings.conf userprefs.conf monitors.conf|hyprland
+S|${HOME}/.config/hypr|nvidia.conf|hyprland nvidia-utils
+S|${HOME}/.config/hypr/themes|theme.conf wallbash.conf colors.conf|hyprland
+S|${HOME}/.local/state/hyde|hyprland.conf|hyprland
 
 S|${HOME}/.config/hypr|hyprland.conf|hyprland
 O|${HOME}/.local/bin|hyde-shell hydectl|hyprland
@@ -52,28 +52,27 @@ O|${HOME}/.local/share|hyde|hyprland
 O|${HOME}/.local/lib|hyde|hyprland
 
  Editor 
-P|${HOME}/.config/VSCodium/User|settings.json|vscodium
+S|${HOME}/.config/VSCodium/User|settings.json|vscodium
 
  Bar 
-P|${HOME}/.config/waybar|config.ctl|waybar
+S|${HOME}/.config/waybar|config.ctl|waybar
 S|${HOME}/.config/waybar|modules config.jsonc theme.css style.css|waybar
 
  Terminal 
-P|${HOME}/.config|lsd|lsd
-P|${HOME}/.config|fastfetch|fastfetch
+S|${HOME}/.config|lsd|lsd
+S|${HOME}/.config|fastfetch|fastfetch
 O|${HOME}/.local/share/fastfetch/presets|hyde|fastfetch
 
 S|${HOME}/.config/kitty|hyde.conf theme.conf|kitty
-P|${HOME}/.config/kitty|kitty.conf|kitty
+S|${HOME}/.config/kitty|kitty.conf|kitty
 
  Shell 
-P|${HOME}/.config|fish|fish
-P|${HOME}|.zshrc .hyde.zshrc .p10k.zsh|zsh zsh-theme-powerlevel10k
-S|${HOME}|.zshenv|zsh zsh-theme-powerlevel10k
+S|${HOME}/.config|fish|fish
+S|${HOME}/.config|ranger|ranger
 
  File Explorer 
-P|${HOME}/.local/state|dolphinstaterc|dolphin
-P|${HOME}/.config|baloofilerc|dolphin
+S|${HOME}/.local/state|dolphinstaterc|dolphin
+S|${HOME}/.config|baloofilerc|dolphin
 S|${HOME}/.config/menus|applications.menu|dolphin
 S|${HOME}/.config|dolphinrc|dolphin
 S|${HOME}/.config|kdeglobals|dolphin
@@ -82,12 +81,12 @@ S|${HOME}/.local/share/kxmlgui5|dolphin|dolphin
 S|${HOME}/.local/share|dolphin|dolphin
 
  Input 
-P|${HOME}/.config|libinput-gestures.conf|libinput-gestures
+S|${HOME}/.config|libinput-gestures.conf|libinput-gestures
 
  Wayland 
-P|${HOME}/.config|spotify-flags.conf|spotify
-P|${HOME}/.config|vscodium-flags.conf|vscodium
-P|${HOME}/.config|electron-flags.conf|electron
+S|${HOME}/.config|spotify-flags.conf|spotify
+S|${HOME}/.config|vscodium-flags.conf|vscodium
+S|${HOME}/.config|electron-flags.conf|electron
 
  Notifications 
 S|${HOME}/.config|dunst|dunst
@@ -96,12 +95,12 @@ S|${HOME}/.config|dunst|dunst
 S|${HOME}/.config|MangoHud|mangohud
 
  Launcher 
-P|${HOME}/.config|rofi|rofi
+S|${HOME}/.config|rofi|rofi
 S|${HOME}/.config|wlogout|wlogout
 
  Lock Screen 
-P|${HOME}/.config/hypr|hyprlock.conf|hyprlock
+S|${HOME}/.config/hypr|hyprlock.conf|hyprlock
 S|${HOME}/.config/hypr|hyprlock|hyprlock
 
  Idle daemon 
-P|${HOME}/.config/hypr|hypridle.conf|hypridle
+S|${HOME}/.config/hypr|hypridle.conf|hypridle
