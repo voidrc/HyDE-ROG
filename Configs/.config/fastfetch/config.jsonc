@@ -48,14 +48,14 @@
         {
             "type": "gpu",
             "key": "󰍛  GPU      ",
-            "keyColor": "cyan"
-            //      "text": "lspci | grep -i vga | awk -F': | \\\\[|\\\\]' '{print $2 \" [\" $3 \"]\"}'"
+            "keyColor": "cyan",
+            "text": "lspci | grep -i vga | awk -F': | \\\\[|\\\\]' '{print $2 \" [\" $3 \"]\"}'"
         },
-        //    {
-        //      "type": "disk",
-        //      "key": "󰉉  Disk     ",
-        //      "keyColor": "cyan",
-        //    },
+        {
+            "type": "disk",
+            "key": "󰉉  Disk     ",
+            "keyColor": "cyan",
+        },
         {
             "type": "custom",
             "format": ">-----------<+>------------------------------------------<",
