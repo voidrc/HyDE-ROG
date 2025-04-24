@@ -54,7 +54,6 @@ Here are all HyDE specific keybindings listed.
 | Keys                                                 | Action                          |
 | :--------------------------------------------------- | :------------------------------ |
 | <kbd>CTRL</kbd> + <kbd>Q</kbd>                       | close focused window            |
-| <kbd>ALT</kbd> + <kbd>F4</kbd>                       | close focused window            |
 | <kbd>SUPER</kbd> + <kbd>Delete</kbd>                 | kill hyprland session           |
 | <kbd>SUPER</kbd> + <kbd>W</kbd>                      | toggle float                    |
 | <kbd>SUPER</kbd> + <kbd>G</kbd>                      | toggle group                    |
