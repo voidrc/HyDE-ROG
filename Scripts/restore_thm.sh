@@ -8,7 +8,7 @@ if ! source "${scrDir}/global_fn.sh"; then
 fi
 
 THEME_IMPORT_ASYNC=${THEME_IMPORT_ASYNC:-0}
-THEME_IMPORT_FILE="${1:-${scrDir}/themepatcher3.lst}"
+THEME_IMPORT_FILE="${1:-${scrDir}/themepatcher.lst}"
 confDir=${confDir:-"$HOME/.config"}
 flg_ThemeInstall=${flg_ThemeInstall:-1}
 flg_DryRun=${flg_DryRun:-0}

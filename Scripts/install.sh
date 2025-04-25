@@ -242,14 +242,7 @@ EOF
 
     "${scrDir}/restore_fnt.sh" 
     "${scrDir}/restore_cfg.sh"
-    "${scrDir}/restore_thm1.sh"
-    rm -rf "$HOME/.cache/hyde/themepatcher"
-    "${scrDir}/restore_thm2.sh"
-    rm -rf "$HOME/.cache/hyde/themepatcher"
-    "${scrDir}/restore_thm3.sh"
-    rm -rf "$HOME/.cache/hyde/themepatcher"
-    "${scrDir}/restore_thm4.sh"
-    rm -rf "$HOME/.cache/hyde/themepatcher"
+    "${scrDir}/restore_thm.sh"
     print_log -g "[generate] " "cache ::" "Wallpapers..."
     if [ "${flg_DryRun}" -ne 1 ]; then
         "$HOME/.local/lib/hyde/swwwallcache.sh" -t ""
