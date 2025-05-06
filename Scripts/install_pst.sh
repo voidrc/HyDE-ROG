@@ -26,6 +26,11 @@ if pkg_installed sddm; then
         print_log -y "[DISPLAYMANAGER] " -b " :: " "sddm is already configured..."
     fi
 
+    if [ ! -f "/usr/share/sddm/faces/${USER}.face.icon" ] && [ -f "${cloneDir}/Source/misc/${USER}.face.icon" ]; then
+        sudo cp "${cloneDir}/Source/misc/${USER}.face.icon" /usr/share/sddm/faces/
+        print_log -g "[DISPLAYMANAGER] " -b " :: " "avatar set for ${USER}..."
+    fi
+
 else
     print_log -y "[DISPLAYMANAGER] " -b " :: " "sddm is not installed..."
 fi

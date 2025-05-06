@@ -93,6 +93,7 @@ bat                                                    # better cat
 fastfetch                                              # system information fetch tool
 ranger                                                 # CLI file manager 
 fzf                                                    # Command-line fuzzy finder
+starship|fish                                          # customizable shell prompt
 
 # --------------------------------------------------- // HyDE
 hypridle                                               # idle daemon

@@ -240,7 +240,7 @@ EOF
         hyprctl keyword misc:disable_autoreload 1 -q
     fi
 
-    "${scrDir}/restore_fnt.sh" 
+    "${scrDir}/restore_fnt.sh"
     "${scrDir}/restore_cfg.sh"
     "${scrDir}/restore_thm.sh"
     print_log -g "[generate] " "cache ::" "Wallpapers..."
