@@ -87,23 +87,22 @@ vscodium                                               # Full oss text editor
 nwg-displays                                           # monitor management utility
 
 
-# --------------------------------------------------- // Shell
-lsd                                                    # better ls
-bat                                                    # better cat 
+# --------------------------------------------------- // Shell 
 fastfetch                                              # system information fetch tool
 ranger                                                 # CLI file manager 
 fzf                                                    # Command-line fuzzy finder
 starship|fish                                          # customizable shell prompt
+bat|fish
+lolcat|fish
+lsd|fish
+sparklines-git|fish
 
 # --------------------------------------------------- // HyDE
 hypridle                                               # idle daemon
 
 # --------------------------------------------------- // Gaming
-steam                                                  # gaming platform
-gamemode                                               # daemon and library for game optimizations
-mangohud                                               # system performance overlay
-gamescope                                              # micro-compositor for gaming
-lutris                                                 # Lutris is an open source gaming platform for Linux
+cachyos-gaming-meta
+cachyos-gaming-applications
 
 # --------------------------------------------------- // Music
 cava                                                   # audio visualizer
