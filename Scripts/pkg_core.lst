@@ -91,7 +91,6 @@ nwg-displays                                           # monitor management util
 fastfetch                                              # system information fetch tool
 ranger                                                 # CLI file manager 
 fzf                                                    # Command-line fuzzy finder
-starship|fish                                          # customizable shell prompt
 bat|fish
 lolcat|fish
 lsd|fish
