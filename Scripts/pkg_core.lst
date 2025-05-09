@@ -65,7 +65,8 @@ kde-cli-tools                                          # for dolphin file type d
 libnotify                                              # for notifications
 noto-fonts-emoji                                       # emoji font
 emote                                                  # emoji picker gtk3
-youtube-dl-git                                         # for mpv_music
+youtube-dl-git                                         # for mpv_music | youtube compability
+mpv-mpris                                              # for mpv_music | playerctl compability
 
 # --------------------------------------------------- // Theming
 nwg-look                                               # gtk configuration tool

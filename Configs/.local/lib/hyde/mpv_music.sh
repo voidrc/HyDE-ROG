@@ -2,7 +2,7 @@
 
 # Variables
 mDIR="$HOME/Music/"
-iDIR="$HOME/Pictures/void_strike.png"
+iDIR="$HOME/.local/share/icons/logo.png"
 rofi_theme="$HOME/.local/share/rofi/themes/style_9.rasi"
 
 # <<====================================================>>
