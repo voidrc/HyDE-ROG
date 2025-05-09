@@ -65,6 +65,7 @@ kde-cli-tools                                          # for dolphin file type d
 libnotify                                              # for notifications
 noto-fonts-emoji                                       # emoji font
 emote                                                  # emoji picker gtk3
+youtube-dl-git                                         # for mpv_music
 
 # --------------------------------------------------- // Theming
 nwg-look                                               # gtk configuration tool
@@ -76,7 +77,7 @@ qt5-wayland                                            # wayland support in qt5
 qt6-wayland                                            # wayland support in qt6
 
 # --------------------------------------------------- // Applications
-brave-bin                                              # browser
+firefox                                                # browser
 kitty                                                  # terminal
 dolphin                                                # kde file manager
 ark                                                    # kde file archiver
@@ -95,6 +96,7 @@ bat|fish
 lolcat|fish
 lsd|fish
 sparklines-git|fish
+starship|fish
 
 # --------------------------------------------------- // HyDE
 hypridle                                               # idle daemon

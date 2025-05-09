@@ -1,8 +1,9 @@
-# ------------------------------------------- // System
 com.github.tchx84.Flatseal                     # Flatseal
 io.github.flattool.Warehouse                   # Warehouse
-io.missioncenter.MissionCenter                 # MissionCenter
+org.prismlauncher.PrismLauncher                # Minecraft
 
+# ------------------------------------------- // System
+# io.missioncenter.MissionCenter               # MissionCenter
 # io.gitlab.adhami3310.Impression              # Impression
 # com.usebottles.bottles                       # Bottles
 # io.github.dimtpap.coppwr                     # Coppwr

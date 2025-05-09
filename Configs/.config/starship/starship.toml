@@ -1,10 +1,12 @@
 # "$schema" = 'https://starship.rs/config-schema.json'
-add_newline = false
+add_newline = true
 format = """\
   󰣇 \
-  $directory\
-  $git_branch$git_commit$git_state $git_status\
-  $character\n
+  $username\
+  $git_branch$git_commit$git_state $git_status\n\
+  $directory \
+  $character\
+  
 """
 right_format = """
 $singularity\
@@ -66,8 +68,7 @@ $azure\
 $crystal\
 $custom\
 $status\
-$os\
-$time"""
+$os"""
 
 continuation_prompt = '▶▶ '
 
@@ -91,11 +92,16 @@ continuation_prompt = '▶▶ '
 # success_symbol = "[  ]($bold fg:#f8f8f2)"
 # error_symbol = "[ ➤ ]($bold fg:#fb4934)"
 
+[username]
+disabled = false
+format = '[$user ]($style)'
+show_always = true
+
+
 [directory]
 disabled = false
-format = "[$path](bold fg:#8be9fd)"
-truncate_to_repo = false
-# home_symbol = "" 
+format = "[$path](bold fg:#8be9fd underline)"
+truncate_to_repo = false 
 
 [git_branch]
 format = " [  $branch](fg:#9198a1)"
