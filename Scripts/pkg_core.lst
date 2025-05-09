@@ -78,6 +78,10 @@ qt6-wayland                                            # wayland support in qt6
 
 # --------------------------------------------------- // Applications
 firefox                                                # browser
+vesktop                                                # discord
+telegram-desktop                                       # telegram
+meld                                                   # meld
+obsidian                                               # obsidian
 kitty                                                  # terminal
 dolphin                                                # kde file manager
 ark                                                    # kde file archiver
