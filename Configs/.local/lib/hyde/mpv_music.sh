@@ -22,7 +22,7 @@ populate_local_music() {
   while IFS= read -r file; do
     local_music+=("$file")
     filenames+=("$(basename "$file")")
-  done < <(find -L "$mDIR" -type f \( -iname "*.mp3" -o -iname "*.flac" -o -iname "*.wav" -o -iname "*.ogg" -o -iname "*.mp4" \))
+  done < <(find -L "$mDIR" -type f \( -iname "*.mp3" -o -iname "*.flac" -o -iname "*.wav" -o -iname "*.ogg" -o -iname "*.mp4" -o -iname "*.m4a" \))
 }
 
 # <<====================================================>>
