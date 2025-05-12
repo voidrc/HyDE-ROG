@@ -186,20 +186,9 @@ EOF
         for i in "${!shlList[@]}"; do
             print_log -sec "$((i + 1))" " ${shlList[$i]} "
         done
-        prompt_timer 120 "Enter option number [default: zsh] | q to quit "
-
-        case "${PROMPT_INPUT}" in
-        1) export myShell="zsh" ;;
-        2) export myShell="fish" ;;
-        q)
-            print_log -sec "shell" -crit "Quit" "Exiting..."
-            exit 1
-            ;;
-        *)
-            print_log -sec "shell" -warn "Defaulting to zsh"
-            export myShell="zsh"
-            ;;
-        esac
+        
+        export myShell="fish"
+        
         print_log -sec "shell" -stat "Added as shell" "${myShell}"
         echo "${myShell}" >>"${scrDir}/install_pkg.lst"
 
