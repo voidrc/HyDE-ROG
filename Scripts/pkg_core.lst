@@ -1,27 +1,27 @@
 # --------------------------------------------------- // System
-pipewire                                               # audio/video server
-pipewire-alsa                                          # pipewire alsa client
-pipewire-audio                                         # pipewire audio client
-pipewire-jack                                          # pipewire jack client
-pipewire-pulse                                         # pipewire pulseaudio client
-gst-plugin-pipewire                                    # pipewire gstreamer client
-wireplumber                                            # pipewire session manager
-pavucontrol                                            # pulseaudio volume control
-pamixer                                                # pulseaudio cli mixer
-networkmanager                                         # network manager
-network-manager-applet                                 # network manager system tray utility
-bluez                                                  # bluetooth protocol stack
-bluez-utils                                            # bluetooth utility cli
-blueman                                                # bluetooth manager gui
-brightnessctl                                          # screen brightness control
-udiskie                                                # manage removable media
-libinput-gestures                                      # actions touchpad gestures using libinput
-wttrbar                                                # for weather
-python-requests|wttrbar                                # script dependency
+pipewire                                              # audio/video server
+pipewire-alsa                                         # pipewire alsa client
+pipewire-audio                                        # pipewire audio client
+pipewire-jack                                         # pipewire jack client
+pipewire-pulse                                        # pipewire pulseaudio client
+gst-plugin-pipewire                                   # pipewire gstreamer client
+wireplumber                                           # pipewire session manager
+pavucontrol                                           # pulseaudio volume control
+pamixer                                               # pulseaudio cli mixer
+networkmanager                                        # network manager
+network-manager-applet                                # network manager system tray utility
+bluez                                                 # bluetooth protocol stack
+bluez-utils                                           # bluetooth utility cli
+blueman                                               # bluetooth manager gui
+brightnessctl                                         # screen brightness control
+udiskie                                               # manage removable media
+libinput-gestures                                     # actions touchpad gestures using libinput
+wttrbar                                               # for weather
+python-requests|wttrbar                               # script dependency
 
 # --------------------------------------------------- // fixes issue within AthenaOS
-fakeroot                                               # needed to fix issue with installation
-debugedit                                              # and usage of aur
+fakeroot                                              # needed to fix issue with installation
+debugedit                                             # and usage of aur
 
 # --------------------------------------------------- // Rog Compability
 power-profiles-daemon
@@ -30,93 +30,93 @@ supergfxctl
 rog-control-center
 
 # --------------------------------------------------- // Display Manager
-sddm                                                   # display manager for KDE plasma
-qt5-quickcontrols                                      # for sddm theme ui elements
-qt5-quickcontrols2                                     # for sddm theme ui elements
-qt5-graphicaleffects                                   # for sddm theme effects
+sddm                                                  # display manager for KDE plasma
+qt5-quickcontrols                                     # for sddm theme ui elements
+qt5-quickcontrols2                                    # for sddm theme ui elements
+qt5-graphicaleffects                                  # for sddm theme effects
 
 # --------------------------------------------------- // Window Manager
-hyprland                                               # wlroots-based wayland compositor
-dunst                                                  # notification daemon
-rofi-wayland                                           # application launcher
-waybar                                                 # system bar
-swww                                                   # wallpaper
-hyprlock                                               # lock screen
-wlogout                                                # logout menu
-grim                                                   # screenshot tool
-hyprpicker                                             # color picker
-slurp                                                  # region select for screenshot/screenshare
-satty                                                  # Modern Screenshot Annotation
-cliphist                                               # clipboard manager
-hyprsunset                                             # blue light filter
+hyprland                                              # wlroots-based wayland compositor
+dunst                                                 # notification daemon
+rofi-wayland                                          # application launcher
+waybar                                                # system bar
+swww                                                  # wallpaper
+hyprlock                                              # lock screen
+wlogout                                               # logout menu
+grim                                                  # screenshot tool
+hyprpicker                                            # color picker
+slurp                                                 # region select for screenshot/screenshare
+satty                                                 # Modern Screenshot Annotation
+cliphist                                              # clipboard manager
+hyprsunset                                            # blue light filter
 
 # --------------------------------------------------- // Dependencies
-polkit-gnome                                           # authentication agent
-xdg-desktop-portal-hyprland                            # xdg desktop portal for hyprland
-xdg-desktop-portal-gtk                                 # file picker and dbus  integration
-xdg-user-dirs                                          # Manage user directories like ~/Desktop and ~/Music
-pacman-contrib                                         # for system update check
-parallel                                               # for parallel processing
-jq                                                     # for json processing
-imagemagick                                            # for image processing
-qt5-imageformats                                       # for dolphin image thumbnails
-ffmpegthumbs                                           # for dolphin video thumbnails
-kde-cli-tools                                          # for dolphin file type defaults
-libnotify                                              # for notifications
-noto-fonts-emoji                                       # emoji font
-emote                                                  # emoji picker gtk3
-youtube-dl-git                                         # for mpv_music | youtube compability
-mpv-mpris                                              # for mpv_music | playerctl compability
+polkit-gnome                                          # authentication agent
+xdg-desktop-portal-hyprland                           # xdg desktop portal for hyprland
+xdg-desktop-portal-gtk                                # file picker and dbus  integration
+xdg-user-dirs                                         # Manage user directories like ~/Desktop and ~/Music
+pacman-contrib                                        # for system update check
+parallel                                              # for parallel processing
+jq                                                    # for json processing
+imagemagick                                           # for image processing
+qt5-imageformats                                      # for dolphin image thumbnails
+ffmpegthumbs                                          # for dolphin video thumbnails
+kde-cli-tools                                         # for dolphin file type defaults
+libnotify                                             # for notifications
+noto-fonts-emoji                                      # emoji font
+emote                                                 # emoji picker gtk3
+youtube-dl-git                                        # for mpv_music | youtube compability
+mpv-mpris                                             # for mpv_music | playerctl compability
 
 # --------------------------------------------------- // Theming
-nwg-look                                               # gtk configuration tool
-qt5ct                                                  # qt5 configuration tool
-qt6ct                                                  # qt6 configuration tool
-kvantum                                                # svg based qt6 theme engine
-kvantum-qt5                                            # svg based qt5 theme engine
-qt5-wayland                                            # wayland support in qt5
-qt6-wayland                                            # wayland support in qt6
+nwg-look                                              # gtk configuration tool
+qt5ct                                                 # qt5 configuration tool
+qt6ct                                                 # qt6 configuration tool
+kvantum                                               # svg based qt6 theme engine
+kvantum-qt5                                           # svg based qt5 theme engine
+qt5-wayland                                           # wayland support in qt5
+qt6-wayland                                           # wayland support in qt6
 
 # --------------------------------------------------- // Applications
-firefox                                                # browser
-vesktop                                                # discord
-telegram-desktop                                       # telegram
-meld                                                   # meld
-obsidian                                               # obsidian
-kitty                                                  # terminal
-dolphin                                                # kde file manager
-ark                                                    # kde file archiver
-unzip                                                  # extracting zip files
-vim                                                    # terminal text editor
-neovim                                                 # vim based text editor/IDE
-vscodium                                               # Full oss text editor
-nwg-displays                                           # monitor management utility
+firefox                                               # browser
+vesktop                                               # discord
+telegram-desktop                                      # telegram
+meld                                                  # meld
+obsidian                                              # obsidian
+kitty                                                 # terminal
+dolphin                                               # kde file manager
+ark                                                   # kde file archiver
+unzip                                                 # extracting zip files
+vim                                                   # terminal text editor
+neovim                                                # vim based text editor/IDE
+vscodium                                              # full oss text editor
+nwg-displays                                          # monitor management utility
 
 
 # --------------------------------------------------- // Shell 
-fastfetch                                              # system information fetch tool
-ranger                                                 # CLI file manager 
-fzf                                                    # Command-line fuzzy finder
-bat|fish
-lolcat|fish
-lsd|fish
-sparklines-git|fish
-starship|fish
+fastfetch                                             # system information fetch tool
+ranger                                                # CLI file manager 
+fzf                                                   # Command-line fuzzy finder
+bat|fish                                              # better cat
+lolcat|fish                                           # lolcat
+lsd|fish                                              # better ls
+sparklines-git|fish                                   # bar maker
+starship|fish                                         # fish prompt manager
 
 # --------------------------------------------------- // HyDE
-hypridle                                               # idle daemon
+hypridle                                              # idle daemon
 
 # --------------------------------------------------- // Gaming
-cachyos-gaming-meta
-cachyos-gaming-applications
+cachyos-gaming-meta                                   # cachyos gaming dependencies
+cachyos-gaming-applications                           # cachyos gaming applications
 
 # --------------------------------------------------- // Music
-cava                                                   # audio visualizer
-spotify                                                # proprietary music streaming service
-spicetify-cli                                          # cli to customize spotify client
+cava                                                  # audio visualizer
+spotify                                               # proprietary music streaming service
+spicetify-cli                                         # cli to customize spotify client
 
 # --------------------------------------------------- // Backends
-electron                                               # electron backend
+electron                                              # electron backend
 
 # --------------------------------------------------- // OSD
-swayosd-git                                            # A GTK based on screen display for keyboard shortcuts like caps-lock and volume
+swayosd-git                                           # A GTK based on screen display for keyboard shortcuts like caps-lock and volume
