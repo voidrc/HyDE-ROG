@@ -1,7 +1,7 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-        "source": "~/.config/fastfetch/loli.icon",
+        "source": "~/.config/fastfetch/waifu.webp",
         "type": "kitty",
         "height": 13,
         "width": 26,
@@ -112,6 +112,12 @@
             "type": "uptime",
             "key": "󰅐  Uptime   ",
             "keyColor": "blue"
+        },
+        {
+            "type": "command",
+            "key": "  ToDo     ",
+            "keyColor": "blue",
+            "text": "echo $(todo)"
         },
         {
             "type": "custom",
