@@ -3,7 +3,7 @@
 # Early load to maintain fastfetch speed
 if [ -z "${*}" ]; then
   clear
-  exec fastfetch --logo-type kitty
+  exec fastfetch logo
   exit
 fi
 
@@ -28,9 +28,7 @@ USAGE
 
 # Set the variables
 confDir="${XDG_CONFIG_HOME:-$HOME/.config}"
-iconDir="${XDG_DATA_HOME:-$HOME/.local/share}/icons"
 image_dirs=()
-hyde_distro_logo=${iconDir}/Wallbash-Icon/distro/$LOGO
 
 # Parse the main command 
 case $1 in
@@ -38,15 +36,7 @@ logo) # eats around 13 ms
   random() {
     (
       image_dirs+=("${confDir}/fastfetch/logo")
-      image_dirs+=("${iconDir}/Wallbash-Icon/fastfetch/")
-      if [ -n "${HYDE_THEME}" ] && [ -d "${confDir}/hyde/themes/${HYDE_THEME}/logo" ]; then
-        image_dirs+=("${confDir}/hyde/themes/${HYDE_THEME}/logo")
-      fi
-      [ -d "$HYDE_CACHE_HOME" ] && image_dirs+=("$HYDE_CACHE_HOME")
-      [ -f "$hyde_distro_logo" ] && echo "${hyde_distro_logo}"
-      [ -f "$HOME/.face.icon" ] && echo "$HOME/.face.icon"
-
-      find -L "${image_dirs[@]}" -maxdepth 1 -type f \( -name "wall.quad" -o -name "wall.sqre" -o -name "*.icon" -o -name "*logo*" -o -name "*.png" \) ! -path "*/wall.set*" ! -path "*/wallpapers/*.png" 2>/dev/null
+      find -L "${image_dirs[@]}" -maxdepth 1 -type f \( -name "*.webp" -o -name "*.icon" -o -name "*.jpeg" -o -name "*.png" \) 2>/dev/null
     ) | shuf -n 1
   }
   help() {
