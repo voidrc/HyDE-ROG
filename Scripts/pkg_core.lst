@@ -102,6 +102,9 @@ lolcat|fish                                           # lolcat
 lsd|fish                                              # better ls
 sparklines-git|fish                                   # bar maker
 starship|fish                                         # fish prompt manager
+sl|fish                                               # train
+openbsd-netcat|fish                                   # needed for termbin
+snapper|fish                                          # snapshot manager
 
 # --------------------------------------------------- // HyDE
 hypridle                                              # idle daemon

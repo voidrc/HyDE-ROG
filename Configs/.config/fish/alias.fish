@@ -1,267 +1,110 @@
-### ALIASES ###
+## 🔍 DIRECTORY & FILE MANAGEMENT
 
-# Alias's for multiple directory listing commands
+### 📁 Listing Files/Directories (using `lsd`)
 alias ls='lsd -lF --color=auto'
 alias la='lsd -alF'
-alias lx='lsd -lXh' # sort by extension
-alias lk='lsd -lSrh' # sort by size
-alias lr='lsd -lRh' # recursive ls
-alias lt='lsd -ltrh' # sort by date
-alias lm='lsd -alh | more' # pipe through 'more'
-alias lf="lsd -l | grep -E -v '^d'" # files only
-alias ldir="lsd -l | grep -E '^d'" # directories only
-alias l.="lsd -A | grep -E '^\.'"
+alias lx='lsd -lXh'           # sort by extension
+alias lk='lsd -lSrh'          # sort by size
+alias lr='lsd -lRh'           # recursive
+alias lt='lsd -ltrh'          # sort by date
+alias lf="lsd -l | grep -E -v '^d'"     # files only
+alias ldir="lsd -l | grep -E '^d'"      # directories only
+alias l.="lsd -A | grep -E '^\.'"       # hidden files only
 
-# Handy change dir shortcuts
-abbr .. 'cd ..'
-abbr .2 'cd ../..'
-abbr .3 'cd ../../..'
-abbr .4 'cd ../../../..'
-abbr .5 'cd ../../../../..'
+### 📂 Change Directory Shortcuts
+abbr ..='cd ..'
+abbr .2='cd ../..'
+abbr .3='cd ../../..'
+abbr .4='cd ../../../..'
+abbr .5='cd ../../../../..'
 
-#tmux
-alias tmux='tmux -u'
+# <<====================================================>>
 
-# alias to show the date
-alias da='date "+%Y-%m-%d %A %T %Z"'
+## ⚙️ SYSTEM UTILITIES
 
-## Colorize the grep command output for ease of use (good for log files)##
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias phpunit='phpunit --colors'
-alias vimpress="VIMENV=talk vim"
-alias biggest="du -h --max-depth=1 | sort -h"
-alias follow="tail -f -n +1"
-#readable output
-alias df='df -h'
+### 🧱 Disk and Filesystem
+alias df='df -h'                        # human-readable disk usage
+alias biggest="du -h --max-depth=1 | sort -h"    # biggest directories
+alias countfiles="bash -c \"for t in files links directories; do echo \\\$(find . -type \\\${t:0:1} | wc -l) \\\$t; done 2> /dev/null\""
 
-# Alias's to modified commands
-#alias cp='cp -i'
-#alias mv='mv -i'
-#alias rm='rm -iv'
-alias mkdir='mkdir -p'
-alias ping='ping -c 10'
-alias less='less -R'
-alias multitail='multitail --no-repeat -c'
-alias train='sl | lolcat'
-alias vim='vim "+set si"'
-alias devil='fortune | cowsay -f eyes | lolcat'
+### 🔌 Hardware & CPU Info
+alias hw="hwinfo --short"
+alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
 
-# Alias's to user support
+### ⚠️ Logs & Failures
 alias tb='nc termbin.com 9999'
-alias journalctl-upload='sudo journalctl | tb'
+alias jctl="journalctl -p 3 -xb"
+alias error-upload='sudo jctl | tb'
+alias sysfailed="systemctl list-units --failed"
+alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:\$//g' | grep -v '[0-9]\$' | xargs tail -f"
 
-#pacman unlock
-alias unlock="sudo rm /var/lib/pacman/db.lck"
+### 🔒 Networking
+alias openports='netstat -nape --inet'
+alias ping='ping -c 10'
 
-#free in MB
-alias free="free -mt"
+# <<====================================================>>
 
-#python
-alias pyserver='python3 -m http.server'
+## 💻 PACKAGE & SYSTEM MANAGEMENT
 
-#continue download
-alias wget="wget -c"
-
-#userlist
-alias userlist="cut -d: -f1 /etc/passwd"
-
-# Aliases for software managment
-# pacman or pm
+### 📦 Pacman & Cleanup
 alias pacman='pacman --color auto'
-alias update='sudo pacman -Syyu'
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'   # remove orphans
+alias unlock="sudo rm /var/lib/pacman/db.lck"      # unlock pacman
 
-# paru as aur helper - updates everything
-alias upall="yay -Syu --noconfirm"
-
-#grub update
+### 🧰 GRUB & Shell
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-
-#copy/paste all content of /etc/skel over to home folder - backup of config created - beware
-#skel alias has been replaced with a script at /usr/local/bin/skel
-
-#backup contents of /etc/skel to hidden backup folder in home/user
-alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
-
-#switch between bash and zsh
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
-#switch between lightdm and sddm
-alias tolightdm="sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings --noconfirm --needed ; sudo systemctl enable lightdm.service -f ; echo 'Lightm is active - reboot now'"
-alias tosddm="sudo pacman -S sddm --noconfirm --needed ; sudo systemctl enable sddm.service -f ; echo 'Sddm is active - reboot now'"
-alias toly="sudo pacman -S ly --noconfirm --needed ; sudo systemctl enable ly.service -f ; echo 'Ly is active - reboot now'"
-alias togdm="sudo pacman -S gdm --noconfirm --needed ; sudo systemctl enable gdm.service -f ; echo 'Gdm is active - reboot now'"
-alias tolxdm="sudo pacman -S lxdm --noconfirm --needed ; sudo systemctl enable lxdm.service -f ; echo 'Lxdm is active - reboot now'"
-
-#hardware info --short
-alias hw="hwinfo --short"
-
-#skip integrity check
-alias paruskip='paru -S --mflags --skipinteg'
-alias yayskip='yay -S --mflags --skipinteg'
-alias trizenskip='trizen -S --skipinteg'
-
-#check vulnerabilities microcode
-alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
-
-#get fastest mirrors in your neighborhood
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pacman.d/mirrorlist"
-#our experimental - best option for the moment
-alias mirrorx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 5 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
-alias mirrorxx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 20 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
-alias ram='sudo rate-mirrors --allow-root --disable-comments arch | sudo tee /etc/pacman.d/mirrorlist'
-alias rams='sudo rate-mirrors --allow-root --disable-comments --protocol https arch  | sudo tee /etc/pacman.d/mirrorlist'
-alias rcm='sudo rate-mirrors --concurrency 40 --allow-root --disable-comments --save /etc/pacman.d/chaotic-mirrorlist chaotic-aur'
-
-#youtube download
-alias yta-aac="yt-dlp --extract-audio --audio-format aac "
-alias yta-best="yt-dlp --extract-audio --audio-format best "
-alias yta-flac="yt-dlp --extract-audio --audio-format flac "
-alias yta-mp3="yt-dlp --extract-audio --audio-format mp3 "
-alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 "
-
-#Cleanup orphaned packages
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
-
-#clear
-alias clean="clear; seq 1 $(tput cols) | sort -R | sparklines | lolcat"
-
-#search content with ripgrep
-alias rg="rg --sort path"
-
-#get the error messages from journalctl
-alias jctl="journalctl -p 3 -xb"
-
-#nano for important configuration files
-#know what you do in these files
-alias nlxdm="sudo $EDITOR /etc/lxdm/lxdm.conf"
-alias nlightdm="sudo $EDITOR /etc/lightdm/lightdm.conf"
-alias npacman="sudo $EDITOR /etc/pacman.conf"
-alias ngrub="sudo $EDITOR /etc/default/grub"
-alias nconfgrub="sudo $EDITOR /boot/grub/grub.cfg"
-alias nmkinitcpio="sudo $EDITOR /etc/mkinitcpio.conf"
-alias nmirrorlist="sudo $EDITOR /etc/pacman.d/mirrorlist"
-alias nsddm="sudo $EDITOR /etc/sddm.conf"
-alias nsddmk="sudo $EDITOR /etc/sddm.conf.d/kde_settings.conf"
-alias nfstab="sudo $EDITOR /etc/fstab"
-alias nnsswitch="sudo $EDITOR /etc/nsswitch.conf"
-alias nsamba="sudo $EDITOR /etc/samba/smb.conf"
-alias ngnupgconf="sudo $EDITOR /etc/pacman.d/gnupg/gpg.conf"
-alias nhosts="sudo $EDITOR /etc/hosts"
-alias nhostname="sudo $EDITOR /etc/hostname"
-alias nb="$EDITOR ~/.bashrc"
-alias nz="$EDITOR ~/.zshrc"
-alias nf="$EDITOR ~/.config/fish/config.fish"
-
-#reading with bat
-alias cat="bat"
-
-#gpg
-#verify signature for isos
-alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
-#receive the key of a developer
-alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
-alias fix-keyserver="[ -d ~/.gnupg ] || mkdir ~/.gnupg ; cp /etc/pacman.d/gnupg/gpg.conf ~/.gnupg/ ; echo 'done'"
-alias init-keys="sudo rm -rf /etc/pacman.d/gnupg; sudo pacman-key --init; sudo pacman-key --populate; sudo pacman -Syy"
-
-#fixes
-alias fix-permissions="sudo chown -R $USER:$USER ~/.config ~/.local"
-alias lockreset="faillock --user $USER --reset"
-
-#maintenance
-alias big="expac -H M '%m\t%n' | sort -h | nl"
-
-#hblock (stop tracking with hblock)
-#use unhblock to stop using hblock
-alias unhblock="hblock -S none -D none"
-
-#systeminfo
-#alias probe="sudo -E hw-probe -all -upload"
-alias sysfailed="systemctl list-units --failed"
-
-#shutdown or reboot
-alias ssn="sudo shutdown now"
-alias sr="sudo reboot"
-
-#btrfs aliases
-alias btrfsfs="sudo btrfs filesystem df /"
-alias btrfsli="sudo btrfs su li / -t"
-
-#snapper aliases
-alias snapcroot="sudo snapper -c root create-config /"
-alias snapchome="sudo snapper -c home create-config /home"
-alias snapli="sudo snapper list"
-alias snapcr="sudo snapper -c root create"
-alias snapch="sudo snapper -c home create"
-
-#Leftwm aliases
-alias lti="leftwm-theme install"
-alias ltu="leftwm-theme uninstall"
-alias lta="leftwm-theme apply"
-alias ltupd="leftwm-theme update"
-alias ltupg="leftwm-theme upgrade"
-
-#remove
-alias rmgitcache="rm -r ~/.cache/git"
-
-# Search running processes
-alias p="ps aux | grep "
-alias topcpu="/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
-
-# Count all files (recursively) in the current folder
-alias countfiles="bash -c \"for t in files links directories; do echo \\\$(find . -type \\\${t:0:1} | wc -l) \\\$t; done 2> /dev/null\""
-
-# Show current network connections to the server
-alias ipview="netstat -anpl | grep :80 | awk {'print \$5'} | cut -d\":\" -f1 | sort | uniq -c | sort -n | sed -e 's/^ *//' -e 's/ *\$//'"
-
-# Show open ports
-alias openports='netstat -nape --inet'
-
-# Alias's for safe and forced reboots
-alias rebootsafe='sudo shutdown -r now'
+### 🔁 Shutdown / Reboot
+alias shutdown="sudo shutdown now"
+alias reboot="sudo reboot -r now"
 alias rebootforce='sudo shutdown -r -n now'
 
-# Alias's to show disk space and space used in a folder
-alias diskspace="du -S | sort -n -r |more"
-alias folders='du -h --max-depth=1'
-alias folderssort='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
-alias tree='tree -CAhF --dirsfirst'
-alias treed='tree -CAFd'
-alias mountedinfo='df -hT'
+# <<====================================================>>
 
+## 📸 SNAPPER SNAPSHOT MANAGEMENT
+alias snap_croot="sudo snapper -c root create-config /"
+alias snap_chome="sudo snapper -c home create-config /home"
+alias snap_list="sudo snapper list"
+alias snap_root="sudo snapper -c root create"
+alias snap_home="sudo snapper -c home create"
 
-#amass config alias
-alias Amass='amass enum -config ~/.config/amass/config.ini -d $1'
+# <<====================================================>>
 
+## 🛠️ MODIFIED COMMANDS & SHORTCUTS
 
-# Show all logs in /var/log
-alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:\$//g' | grep -v '[0-9]\$' | xargs tail -f"
+### 🧼 Safe Alternatives (commented or optional)
+# alias cp='cp -i'
+# alias mv='mv -i'
+# alias rm='rm -iv'
+alias mkdir='mkdir -p'
+alias wget="wget -c"
 
-# SHA1
-alias sha1='openssl sha1'
+### 🖥️ Viewers
+alias less='less -R'
+alias cat='bat'
+alias multitail='multitail --no-repeat -c'
 
-alias open='xdg-open'
+### 🔎 Grep with Colors
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias phpunit='phpunit --colors'
 
-alias reloadbash='source ~/.bashrc'
-alias reloadprofile='source ~/.profile'
+### 🔍 SEARCH ENHANCEMENTS
+alias rg="rg --sort path"        # ripgrep with path sorting
 
-alias ebash='subl ~/.bashrc'
-alias eprofile='subl ~/.profile'
+### 🎨 Fun Commands
+alias sl='sl | lolcat'
+alias clear="clear && seq 1 \$(tput cols) | sort -R | sparklines | lolcat"
 
-alias cats='highlight -O ansi --force'
+# <<====================================================>>
 
-#fix obvious typo's
-alias cd..='cd ..'
-alias pdw='pwd'
-alias udpate='sudo pacman -Syyu'
-alias upate='sudo pacman -Syyu'
-alias updte='sudo pacman -Syyu'
-alias updqte='sudo pacman -Syyu'
-alias upqll='yay -Syu --noconfirm'
-alias upal='yay -Syu --noconfirm'
+## 📥 MEDIA DOWNLOAD (YT-DLP)
+alias yta-aac="yt-dlp --extract-audio --audio-format aac"
+alias yta-best="yt-dlp --extract-audio --audio-format best"
+alias yta-flac="yt-dlp --extract-audio --audio-format flac"
+alias yta-mp3="yt-dlp --extract-audio --audio-format mp3"
+alias ytv-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
