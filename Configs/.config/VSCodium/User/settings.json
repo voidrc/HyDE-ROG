@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Adey Coder - Deep Dark",
+  "workbench.colorTheme": "Wallbash",
   "editor.fontSize": 12,
   "editor.scrollbar.vertical": "hidden",
   "editor.scrollbar.verticalScrollbarSize": 0,
@@ -14,20 +14,21 @@
   "terminal.explorerKind": "both",
   "terminal.sourceControlRepositoriesKind": "both",
   "telemetry.telemetryLevel": "off",
-  "workbench.activityBar.location": "top",
   "window.customTitleBarVisibility": "auto",
-  "window.menuBarVisibility": "toggle",
   "chat.commandCenter.enabled": false,
   "workbench.startupEditor": "none",
   "codium.enterprise.onPremService.enable": true,
   "codium.codeCompletion.enable": true,
   "git.enableSmartCommit": true,
-  "git.confirmSync": true,
+  "git.confirmSync": false,
   "git.autofetch": true,
   "explorer.confirmDelete": false,
   "editor.minimap.enabled": false,
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "explorer.confirmDragAndDrop": false
+  "explorer.confirmDragAndDrop": false,
+  "window.menuBarVisibility": "toggle",
+  "cody.customHeaders": {},
+  "workbench.activityBar.location": "top"
 }
