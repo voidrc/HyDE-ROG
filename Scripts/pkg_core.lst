@@ -89,7 +89,7 @@ ark                                                   # kde file archiver
 unzip                                                 # extracting zip files
 vim                                                   # terminal text editor
 neovim                                                # vim based text editor/IDE
-vscodium                                              # full oss text editor
+cursor-bin                                            # full oss text editor
 nwg-displays                                          # monitor management utility
 
 
