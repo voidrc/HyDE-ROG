@@ -12,11 +12,11 @@ alias ldir="lsd -l | grep -E '^d'"      # directories only
 alias l.="lsd -A | grep -E '^\.'"       # hidden files only
 
 ### 📂 Change Directory Shortcuts
-abbr ..='cd ..'
-abbr .2='cd ../..'
-abbr .3='cd ../../..'
-abbr .4='cd ../../../..'
-abbr .5='cd ../../../../..'
+alias ..='cd ..'
+alias .2='cd ../..'
+alias.3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
 
 # <<====================================================>>
 
