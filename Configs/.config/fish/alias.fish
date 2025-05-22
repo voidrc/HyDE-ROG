@@ -14,7 +14,7 @@ alias l.="lsd -A | grep -E '^\.'"       # hidden files only
 ### 📂 Change Directory Shortcuts
 alias ..='cd ..'
 alias .2='cd ../..'
-alias.3='cd ../../..'
+alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
@@ -97,8 +97,7 @@ alias phpunit='phpunit --colors'
 alias rg="rg --sort path"        # ripgrep with path sorting
 
 ### 🎨 Fun Commands
-alias sl='sl | lolcat'
-alias clear="clear && seq 1 \$(tput cols) | sort -R | sparklines | lolcat"
+alias clear="clear && fastfetch"
 
 # <<====================================================>>
 

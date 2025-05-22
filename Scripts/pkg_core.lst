@@ -98,9 +98,7 @@ fastfetch                                             # system information fetch
 ranger                                                # CLI file manager 
 fzf                                                   # Command-line fuzzy finder
 bat|fish                                              # better cat
-lolcat|fish                                           # lolcat
 lsd|fish                                              # better ls
-sparklines-git|fish                                   # bar maker
 starship|fish                                         # fish prompt manager
 sl|fish                                               # train
 openbsd-netcat|fish                                   # needed for termbin
