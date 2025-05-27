@@ -33,6 +33,7 @@ S|${HOME}/.config/hyde|config.toml|hyprland
 S|${HOME}/.config/hypr|hyde.conf workflows.conf animations.conf windowrules.conf keybindings.conf userprefs.conf monitors.conf|hyprland
 S|${HOME}/.config/hypr|nvidia.conf|hyprland nvidia-utils
 S|${HOME}/.config/hypr/themes|theme.conf wallbash.conf colors.conf|hyprland
+S|${HOME}/.config/systemd|user|systemd
 S|${HOME}/.local/state/hyde|hyprland.conf|hyprland
 
 S|${HOME}/.config/hypr|hyprland.conf|hyprland
@@ -51,8 +52,6 @@ S|${HOME}/.config/hypr|workflows|hyprland
 O|${HOME}/.local/share|hyde|hyprland
 O|${HOME}/.local/lib|hyde|hyprland
 
- Editor 
-S|${HOME}/.config/VSCodium/User|settings.json|vscodium
 
  Bar 
 S|${HOME}/.config/waybar|config.ctl|waybar
@@ -69,6 +68,11 @@ S|${HOME}/.config/kitty|kitty.conf|kitty
  Shell 
 S|${HOME}/.config|fish|fish
 S|${HOME}/.config|ranger|ranger
+
+ Vim 
+P|${HOME}/.config/vim|vimrc|vim
+S|${HOME}/.config/vim/colors|wallbash.vim|vim
+S|${HOME}/.config/vim|hyde.vim|vim
 
  File Explorer 
 S|${HOME}/.local/state|dolphinstaterc|dolphin
@@ -99,6 +103,7 @@ S|${HOME}/.config|rofi|rofi
 S|${HOME}/.config|wlogout|wlogout
 
  Lock Screen 
+S|${HOME}/.config|swaylock|swaylock-effects
 S|${HOME}/.config/hypr|hyprlock.conf|hyprlock
 S|${HOME}/.config/hypr|hyprlock|hyprlock
 

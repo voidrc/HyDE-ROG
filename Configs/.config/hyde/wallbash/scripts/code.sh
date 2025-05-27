@@ -10,7 +10,7 @@ fi
 
 cacheDir="${cacheDir:-$XDG_CACHE_HOME/hyde}"
 # confDir="${confDir:-$XDG_CONFIG_HOME}"
-readarray -t codeConf < <(find "$confDir" -mindepth 1 -maxdepth 1 -type d -name "VSCodium*" -o -name "Cursor*" | sort)
+readarray -t codeConf < <(find "$confDir" -mindepth 1 -maxdepth 1 -type d -name "Code*" -o -name "VSCodium*" -o -name "Cursor*" | sort)
 readarray -t codeVsix < <(find "$HOME" -mindepth 1 -maxdepth 1 -type d -name ".vscode*" -o -name ".cursor" | sort)
 # tmpFile="/tmp/$(id -u)$(basename ${0}).tmp"
 

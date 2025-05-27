@@ -30,73 +30,71 @@ supergfxctl
 rog-control-center
 
 # --------------------------------------------------- // Display Manager
-sddm                                                  # display manager for KDE plasma
-qt5-quickcontrols                                     # for sddm theme ui elements
-qt5-quickcontrols2                                    # for sddm theme ui elements
-qt5-graphicaleffects                                  # for sddm theme effects
+sddm                                                   # display manager for KDE plasma
+qt5-quickcontrols                                      # for sddm theme ui elements
+qt5-quickcontrols2                                     # for sddm theme ui elements
+qt5-graphicaleffects                                   # for sddm theme effects
 
 # --------------------------------------------------- // Window Manager
-hyprland                                              # wlroots-based wayland compositor
-dunst                                                 # notification daemon
-rofi-wayland                                          # application launcher
-waybar                                                # system bar
-swww-git                                              # wallpaper
-hyprlock                                              # lock screen
-wlogout                                               # logout menu
-grim                                                  # screenshot tool
-hyprpicker                                            # color picker
-slurp                                                 # region select for screenshot/screenshare
-satty                                                 # Modern Screenshot Annotation
-cliphist                                              # clipboard manager
-hyprsunset                                            # blue light filter
+hyprland                                               # wlroots-based wayland compositor
+dunst                                                  # notification daemon
+rofi-wayland                                           # application launcher
+waybar                                                 # system bar
+swww-git                                               # wallpaper
+hyprlock                                               # lock screen
+wlogout                                                # logout menu
+grim                                                   # screenshot tool
+hyprpicker                                             # color picker
+slurp                                                  # region select for screenshot/screenshare
+satty                                                  # Modern Screenshot Annotation
+cliphist                                               # clipboard manager
+hyprsunset                                             # blue light filter
 
 # --------------------------------------------------- // Dependencies
-polkit-gnome                                          # authentication agent
-xdg-desktop-portal-hyprland                           # xdg desktop portal for hyprland
-xdg-desktop-portal-gtk                                # file picker and dbus  integration
-xdg-user-dirs                                         # Manage user directories like ~/Desktop and ~/Music
-pacman-contrib                                        # for system update check
-parallel                                              # for parallel processing
-jq                                                    # for json processing
-imagemagick                                           # for image processing
-qt5-imageformats                                      # for dolphin image thumbnails
-ffmpegthumbs                                          # for dolphin video thumbnails
-kde-cli-tools                                         # for dolphin file type defaults
-libnotify                                             # for notifications
-noto-fonts-emoji                                      # emoji font
+polkit-gnome                                           # authentication agent
+xdg-desktop-portal-hyprland                            # xdg desktop portal for hyprland
+xdg-desktop-portal-gtk                                 # file picker and dbus  integration
+xdg-user-dirs                                          # Manage user directories like ~/Desktop and ~/Music
+pacman-contrib                                         # for system update check
+parallel                                               # for parallel processing
+jq                                                     # for json processing
+imagemagick                                            # for image processing
+qt5-imageformats                                       # for dolphin image thumbnails
+ffmpegthumbs                                           # for dolphin video thumbnails
+kde-cli-tools                                          # for dolphin file type defaults
+libnotify                                              # for notifications
+noto-fonts-emoji                                       # emoji font
 emote                                                 # emoji picker gtk3
 youtube-dl-git                                        # for mpv_music | youtube compability
 mpv-mpris                                             # for mpv_music | playerctl compability
 
 # --------------------------------------------------- // Theming
-nwg-look                                              # gtk configuration tool
-qt5ct                                                 # qt5 configuration tool
-qt6ct                                                 # qt6 configuration tool
-kvantum                                               # svg based qt6 theme engine
-kvantum-qt5                                           # svg based qt5 theme engine
-qt5-wayland                                           # wayland support in qt5
-qt6-wayland                                           # wayland support in qt6
+nwg-look                                               # gtk configuration tool
+qt5ct                                                  # qt5 configuration tool
+qt6ct                                                  # qt6 configuration tool
+kvantum                                                # svg based qt6 theme engine
+kvantum-qt5                                            # svg based qt5 theme engine
+qt5-wayland                                            # wayland support in qt5
+qt6-wayland                                            # wayland support in qt6
 
 # --------------------------------------------------- // Applications
-firefox                                               # browser
+firefox                                                # browser
 vesktop                                               # discord
 telegram-desktop                                      # telegram
 meld                                                  # meld
 obsidian                                              # obsidian
-kitty                                                 # terminal
-dolphin                                               # kde file manager
-ark                                                   # kde file archiver
-unzip                                                 # extracting zip files
-vim                                                   # terminal text editor
-neovim                                                # vim based text editor/IDE
-cursor-bin                                            # full oss text editor
-nwg-displays                                          # monitor management utility
+kitty                                                  # terminal
+dolphin                                                # kde file manager
+ark                                                    # kde file archiver
+unzip                                                  # extracting zip files
+vim                                                    # terminal text editor
+cursor-bin                                             # ide text editor
+nwg-displays                                           # monitor management utility
+fzf                                                    # Command-line fuzzy finder
 
-
-# --------------------------------------------------- // Shell 
+# --------------------------------------------------- // Shell
 fastfetch                                             # system information fetch tool
 ranger                                                # CLI file manager 
-fzf                                                   # Command-line fuzzy finder
 bat|fish                                              # better cat
 lsd|fish                                              # better ls
 starship|fish                                         # fish prompt manager
@@ -105,7 +103,7 @@ openbsd-netcat|fish                                   # needed for termbin
 snapper|fish                                          # snapshot manager
 
 # --------------------------------------------------- // HyDE
-hypridle                                              # idle daemon
+hypridle                                               # idle daemon
 
 # --------------------------------------------------- // Gaming
 cachyos-gaming-meta                                   # cachyos gaming dependencies

@@ -101,7 +101,6 @@ prompt_timer() {
     echo ""
     set -e
 }
-
 print_log() {
     local executable="${0##*/}"
     local logFile="${cacheDir}/logs/${HYDE_LOG}/${executable}"
