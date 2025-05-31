@@ -1,8 +1,8 @@
 format = """\
     󰣇 \
     $username \
-    $os \
     $time \
+    $os \
     $git_branch$git_commit$git_state$git_status \
     \n\
     $directory \
@@ -147,7 +147,7 @@ format = '\[[$symbol$cloud(\($project\))]($style)\]'
 
 [os]
 disabled = false
-format = '\[[$symbol$name]($style)\]'
+format = '\[[$name]($style)\]'
 
 [package]
 format = '\[[$symbol$version]($style)\]'
