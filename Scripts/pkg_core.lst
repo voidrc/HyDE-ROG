@@ -101,6 +101,7 @@ starship|fish                                         # fish prompt manager
 sl|fish                                               # train
 openbsd-netcat|fish                                   # needed for termbin
 snapper|fish                                          # snapshot manager
+duf|fish                                              # prettier version of df
 
 # --------------------------------------------------- // HyDE
 hypridle                                               # idle daemon
