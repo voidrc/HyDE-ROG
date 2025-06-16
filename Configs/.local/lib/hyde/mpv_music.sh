@@ -10,7 +10,7 @@ rofi_theme="$HOME/.local/share/rofi/themes/style_9.rasi"
 # Online Stations. Edit as required
 declare -A online_music=(
   ["Radio - Lofi Girl 🎧🎶"]="https://play.streamafrica.net/lofiradio"
-  ["YT - Youtube Remix 📹🎶"]="https://youtube.com/playlist?list=PLdRIV2MGfMlieSEq-ycN37kwrg072p16B&si=nXrb6CWLacy8rNt2"
+  ["YT - Youtube Remix 📹🎶"]="https://youtube.com/playlist?list=PLeOJ6fqfq0F2fZLx3gET0km6w_ToKz5JM&si=uerQ-LtSRS-C70Mj"
 )
 
 # <<====================================================>>
