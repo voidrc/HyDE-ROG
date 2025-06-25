@@ -1,0 +1,15 @@
+~/.config/Code*
+~/.config/fastfetch
+~/.config/kitty
+~/.config/starship
+~/.config/code-flags.conf
+~/.config/hypr/hyprlock
+~/.config/hypr/hypridle.conf
+~/.config/hypr/hyprlock.conf
+~/.config/hypr/keybindings.conf
+~/.config/hyde/wallbash/always/discord.dcol
+~/.config/spotify-flags.conf
+~/.config/nvim
+~/.local/state/nvim
+~/.local/share/nvim
+~/.local/lib/hyde/fastfetch.sh
