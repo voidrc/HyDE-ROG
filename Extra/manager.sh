@@ -3,7 +3,7 @@
 set -euo pipefail
 
 usage() {
-    echo "Usage: $0 [rmt|rmp|ins|sys|fltk] <listfile>"
+    echo "Usage: $0 [rmt|rmb|ins|sys|fltk] <listfile>"
     exit 1
 }
 
@@ -19,6 +19,15 @@ if [[ ! -f "$LISTFILE" ]]; then
     exit 0
 fi
 
+# Detect AUR helper
+if command -v yay &>/dev/null; then
+    AUR_HELPER="yay"
+elif command -v paru &>/dev/null; then
+    AUR_HELPER="paru"
+else
+    AUR_HELPER=""
+fi
+
 case "$MODE" in
     rmt)
         while IFS= read -r trash; do
@@ -27,22 +36,18 @@ case "$MODE" in
             rm -rf "$trash"
         done < "$LISTFILE"
         ;;
-    rmp)
+    rmb)
         while IFS= read -r bloat; do
             [[ -z "$bloat" || "$bloat" =~ ^# ]] && continue
             echo "[*] Removing $bloat"
-            sudo pacman -Rns --noconfirm "$bloat" || echo "[!] $bloat not installed or already removed."
+            if [[ -n "$AUR_HELPER" ]]; then
+                "$AUR_HELPER" -Rns --noconfirm "$bloat" || echo "[!] $bloat not installed or already removed."
+            else
+                sudo pacman -Rns --noconfirm "$bloat" || echo "[!] $bloat not installed or already removed."
+            fi
         done < "$LISTFILE"
         ;;
     ins)
-        # Detect AUR helper
-        if command -v yay &>/dev/null; then
-            AUR_HELPER="yay"
-        elif command -v paru &>/dev/null; then
-            AUR_HELPER="paru"
-        else
-            AUR_HELPER=""
-        fi
         while IFS= read -r pkg; do
             [[ -z "$pkg" || "$pkg" =~ ^# ]] && continue
             echo "[*] Installing $pkg"
