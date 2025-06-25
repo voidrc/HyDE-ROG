@@ -1,8 +1,7 @@
-org.prismlauncher.PrismLauncher                # Minecraft
+                # Minecraft
 
 # ------------------------------------------- // System
-com.github.tchx84.Flatseal                     # Flatseal
-io.github.flattool.Warehouse                   # Warehouse
+                  # Warehouse
 # org.gnome.Boxes                                # Boxes
 # io.missioncenter.MissionCenter                 # MissionCenter
 # io.gitlab.adhami3310.Impression                # Impression

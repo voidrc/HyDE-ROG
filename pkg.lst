@@ -1,5 +1,4 @@
 waveterm
-lsd
 bat
 btop
 neovim
@@ -10,3 +9,5 @@ gnupg
 age
 tar
 zstd
+rsync
+flatpak

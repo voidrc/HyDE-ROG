@@ -3,7 +3,7 @@
 set -euo pipefail
 
 usage() {
-    echo "Usage: $0 [rmt|rmp|ins|sys] <listfile>"
+    echo "Usage: $0 [rmt|rmp|ins|sys|fltk] <listfile>"
     exit 1
 }
 
@@ -65,6 +65,17 @@ case "$MODE" in
             sudo systemctl enable "$svc"
             echo "[*] Starting $svc"
             sudo systemctl start "$svc"
+        done < "$LISTFILE"
+        ;;
+    fltk)
+        if ! command -v flatpak &>/dev/null; then
+            echo "[!] flatpak is not installed. Please install flatpak first."
+            exit 1
+        fi
+        while IFS= read -r fpkg; do
+            [[ -z "$fpkg" || "$fpkg" =~ ^# ]] && continue
+            echo "[*] Installing Flatpak package: $fpkg"
+            flatpak install -y "$fpkg"
         done < "$LISTFILE"
         ;;
     *)

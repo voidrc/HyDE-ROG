@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux-Intro</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: #00ff00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .slideshow-container {
+            width: 80%;
+            max-width: 800px;
+            border: 1px solid #333;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            background-color: #1e1e1e;
+            padding: 20px;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .slide-header {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .slide-content {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #333;
+            color: #00ff00;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <!-- Distro Choosing-->
+        <div class="slide active" id="slide1">
+            <div class="slide-header">Choosing Distro</div>
+            <div class="slide-content">
+                One thing before we move forward, the term Linux is actually quite 
+                a misnomer, since it actually refers to the Linux kernel. 
+                However, many distributions use the Linux kernel so therefore are 
+                commonly known as Linux operating systems.
+                <br><br>
+                A Linux system is divided into three main parts:
+                <ul>
+                    <li>Hardware - This includes all the hardware that your system 
+                        runs on as well as memory, CPU, disks, etc.</li>
+                    <li>Linux Kernel - As we discussed above, the kernel is the core 
+                        of the operating system. It manages the hardware and tells it 
+                        how to interact with the system.</li>
+                    <li>User Space - This is where users like yourself will be directly 
+                        interacting with the system.</li>
+                </ul>
+                So the first step we’ll need to take is to install Linux on your machine.
+                You have many options to choose from.
+                <br><br>
+                There are many Linux distributions to choose from, we’ll just go over 
+                the most popular options.             
+            </div>
+        </div>
+        <!-- Debian -->
+        <div class="slide" id="slide2">
+            <div class="slide-header">Debian</div>
+            <div class="slide-content">
+                <strong>Overview</strong><br>
+                &nbsp;&nbsp;Debian is an operating system composed entirely of free and 
+                open-source software. It’s widely known and has been in development for 
+                over 20 years. There are three branches that you can use, Stable, 
+                Testing and Unstable.<br>
+                &nbsp;&nbsp;Stable is an overall good branch to be on. Testing and 
+                Unstable are rolling releases. This means that any incremental changes 
+                in those branches will eventually become Stable. For example, if you 
+                wanted to get to the next update from Windows XP to Windows 10, you’ll 
+                have to do a complete Windows 10 installation. However being on the 
+                Testing release, you’ll automatically get updates until it becomes the 
+                next operating system release without having to do a full installation.
+                <br><br>
+                <strong>Package Management</strong><br>
+                &nbsp;&nbsp;Debian also uses Debian package management tools. 
+                Every Linux distribution installs and manages packages differently and 
+                they use different package management tools. We’ll get more into this 
+                in a later course.
+                <br><br>
+                <strong>Configurability</strong><br>
+                &nbsp;&nbsp;Debian may not get the latest updates, but it's extremely 
+                stable. If you want a good "core" operating system, this is the one for
+                you.
+                <br><br>
+                <strong>Uses</strong><br>
+                &nbsp;&nbsp;Debian is an overall great operating system for any platform.
+            </div>
+        </div>
+        <!-- RHEL -->
+        <div class="slide" id="slide3">
+            <div class="slide-header">Red Hat Enterprise Linux</div>
+            <div class="slide-content">
+                <strong>Overview</strong><br>
+                &nbsp;&nbsp;Red Hat Enterprise Linux commonly referred to as RHEL is 
+                developed by Red Hat. RHEL has strict rules to restrict free 
+                re-distribution although it still provides source code for free.
+                <br><br>
+                <strong>Package Management</strong><br>
+                &nbsp;&nbsp;RHEL uses a different package manager than Debian, 
+                RPM package manager, which we will eventually learn about as well.
+                <br><br>
+                <strong>Configurability</strong><br>
+                &nbsp;&nbsp;RHEL-based operating systems will differ slightly from the 
+                Debian-based operating systems, most noticeably in package management. 
+                If you decide to go with RHEL it’s probably best if you know 
+                you’ll be working with it.
+                <br><br>
+                <strong>Uses</strong><br>
+                &nbsp;&nbsp;As described by the name it's mostly used in enterprise, 
+                so if you need a solid server OS this would be a good one.
+            </div>
+        </div>
+        <!-- Ubuntu -->
+        <div class="slide" id="slide4">
+            <div class="slide-header">Ubuntu</div>
+            <div class="slide-content">
+                <strong>Overview</strong><br>
+                &nbsp;&nbsp;One of the most popular Linux distributions for personal 
+                machines is Ubuntu. Ubuntu also releases its own desktop environment 
+                manager Unity by default.
+                <br><br>
+                <strong>Package Management</strong><br>
+                &nbsp;&nbsp;Ubuntu is a Debian-based operating system developed by 
+                Canonical. So it uses a core Debian package management system.
+                <br><br>
+                <strong>Configurability</strong><br>
+                &nbsp;&nbsp;Ubuntu is a great choice for a beginner who wants to get 
+                into Linux. Ubuntu offers ease of use and a great user interface 
+                experience that has led to its wide adoption. It’s widely used and 
+                supported and is most like other operating systems like OSX and Windows 
+                in terms of usability.
+                <br><br>
+                <strong>Uses</strong><br>
+                &nbsp;&nbsp;Great for any platform, desktop, laptop and server.
+            </div>
+        </div>
+        <!-- Fedora -->
+        <div class="slide" id="slide5">
+            <div class="slide-header">Fedora</div>
+            <div class="slide-content">
+                <strong>Overview</strong><br>
+                &nbsp;&nbsp;Backed by Red Hat, the Fedora Project is community driven 
+                containing open-source and free software. Red Hat Enterprise Linux 
+                branches off Fedora, so think of Fedora as an upstream RHEL operating 
+                system. Eventually RHEL will get updates from Fedora after thorough 
+                testing and quality assurance. Think of Fedora as an Ubuntu equivalent 
+                that uses a Red Hat backend instead of Debian.
+                <br><br>
+                <strong>Package Management</strong><br>
+                &nbsp;&nbsp;Uses Red Hat package manager.
+                <br><br>
+                <strong>Configurability</strong><br>
+                &nbsp;&nbsp;If you want to use a Red Hat based operating system, 
+                this is a user friendly version.
+                <br><br>
+                <strong>Uses</dtrong><br>
+                &nbsp;&nbsp;Fedora is great if you want a Red Hat based operating 
+                system without the price tag. Recommended for desktop and laptop.
+            </div>
+        </div>
+        <!-- Linux Mint -->
+        <div class="slide" id="slide6">
+            <div class="slide-header">Linux Mint</div>
+            <div class="slide-content">
+                <strong>Overview</strong><br>
+                &nbsp;&nbsp;Linux Mint is based off of Ubuntu. It uses Ubuntu’s 
+                software repositories so the same packages are available on both 
+                distributions. If you prefer a lighter distro than Ubuntu, you may be 
+                interested in Linux Mint.
+                <br><br>
+                <strong>Package Management</strong><br>
+                &nbsp;&nbsp;Since Linux Mint is Ubuntu based, it uses the Debian package
+                manager.
+                <br><br>
+                <strong>Configurability</strong><br>
+                &nbsp;&nbsp;Great user interface, great for beginners and less bloated 
+                than Ubuntu. In this course, I’ll be using Linux Mint, but any other 
+                distribution can be used.
+                <br><br>
+                <strong>Uses</strong><br>
+                &nbsp;&nbsp;Great for desktop and laptop.
+            </div>
+        </div>
+        <!-- Gentoo -->
+        <div class="slide" id="slide7">
+            <div class="slide-header">Gentoo</div>
+            <div class="slide-content">
+                <strong>Overview</strong><br>
+                &nbsp;&nbsp;Gentoo offers ridiculous flexibility with the operating 
+                system at a price. It’s made for advanced users who don’t mind getting 
+                their hands dirty with the system.
+                <br><br>
+                <strong>Package Management</strong><br>
+                &nbsp;&nbsp;Gentoo uses its own package management, Portage. 
+                The Portage package management is very modular and easy to maintain, 
+                which plays a big part in the operating system as a whole being 
+                very flexible.
+                <br><br>
+                <strong>Configurability</strong><br>
+                &nbsp;&nbsp;If you’re just getting started with Linux and want to take 
+                a more difficult path, I’d choose Gentoo or Arch Linux as your 
+                distribution.
+                <br><br>
+                <strong>Uses</strong><br>
+                &nbsp;&nbsp;Great for desktop and laptop.
+            </div>
+        </div>
+        <!-- Arch -->
+        <div class="slide" id="slide8">
+            <div class="slide-header">Arch Linux</div>
+            <div class="slide-content">
+                <strong>Overview</strong><br>
+                &nbsp;&nbsp;Arch is a lightweight and flexible Linux distribution 
+                driven 100% by the community. Similar to Debian, Arch uses a rolling 
+                release model so incremental updates eventually become the Stable 
+                release. You really need to get your hands dirty to understand the 
+                system and its functions, but in turn you get complete and total 
+                control of your system.
+                <br><br>
+                <strong>Package Management</strong><br>
+                &nbsp;&nbsp;It uses its own package manager, Pacman, to install, 
+                update and manage packages.
+                <br><br>
+                <strong>Configurability</strong><br>
+                &nbsp;&nbsp;If you want a lightweight operating system and really want 
+                to understand Linux use Arch! There’s a bit of a learning curve, 
+                but for the hardcore Linux users, this is a great choice.
+                <br><br>
+                <strong>Uses</strong><br>
+                &nbsp;&nbsp;Great for desktop and laptop. If you also have a small 
+                device such as a Raspberry Pi and need to stick a lightweight OS on it, 
+                you can’t go wrong with Arch.
+            </div>
+        </div>
+        <!-- openSUSE -->
+        <div class="slide" id="slide9">
+            <div class="slide-header">openSUSE</div>
+            <div class="slide-content">
+                <strong>Overview</strong><br>
+                &nbsp;&nbsp;openSUSE Linux is created by the openSUSE Project. 
+                A community that promotes the use of Linux everywhere, working 
+                together in an open, transparent and friendly manner as part of the 
+                worldwide Free and Open Source Software community. 
+                openSUSE is the second oldest still running 
+                Linux Distributions and shares the base system with SUSE's award-winning
+                SUSE Linux Enterprise products.
+                <br><br>
+                <strong>Package Management<strong><br>
+                &nbsp;&nbsp;Uses RPM package manager.
+                <br><br>
+                <strong>Configurability</strong><br>
+                &nbsp;&nbsp;openSUSE is a great choice for a new Linux user. 
+                It offers an easy to use graphical installer/administration 
+                application (YaST) and a tiday base system, easy to tinker with. 
+                openSUSE includes everything you need to enjoy the Internet worry 
+                free of viruses/spy-ware and to live out your creativity, be it with 
+                your photos, videos, music or code.
+                <br><br>
+                <strong>Uses</strong><br>
+                &nbsp;&nbsp;openSUSE Leap is fully capable of being used on a desktop 
+                PC and laptop.
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn" onclick="prevSlide()">Previous</button>
+            <button class="btn" onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+{
+  "main": {
+    "id": "906d6c55d0b519d5",
+    "type": "split",
+    "children": [
+      {
+        "id": "204e0d9a1bf78cff",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fd706197f52effde",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Shadow-Archive/src/content/notes/06_To-Sort/Scanning and Enemuration.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Scanning and Enemuration"
+            }
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "336a56844f917dda",
+    "type": "split",
+    "children": [
+      {
+        "id": "9f147bb8523dffb2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7368b701478563c2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "6e4cc259fc0d5705",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 255.5
+  },
+  "right": {
+    "id": "cc35c45b4b01adf7",
+    "type": "split",
+    "children": [
+      {
+        "id": "c39842acd13be240",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9dd0358513408acd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "shadow-Archives/Networking/2) Networking Workflow 1.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2) Networking Workflow 1"
+            }
+          },
+          {
+            "id": "ca921ff804ecf591",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "8484839f80815ecb",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "cb7dd87c4bdcf3b9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "shadow-Archive/src/content/projects/project-1.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of project-1"
+            }
+          },
+          {
+            "id": "95d7f9378f91a98a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "daily-notes:Open today's daily note": false,
+      "command-palette:Open command palette": false,
+      "random-note:Open random note": false,
+      "zk-prefixer:Create new unique note": false,
+      "workspaces:Manage workspace layouts": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "fd706197f52effde",
+  "lastOpenFiles": [
+    "Shadow-Archive/src/content/notes/04_Offensive/1) NMAP.md",
+    "Shadow-Archive/src/content/notes/06_To-Sort/Scanning and Enemuration.md",
+    "Shadow-Archive/src/content/notes/02_Networking/1) Fundamentals.md",
+    "DOS.md",
+    "Shadow-Archive/src/content/notes/05_Home-Lab/0) Shadow-Lab.md",
+    "Shadow-Archive/src/content/notes/05_Home-Lab/1) TailScale.md",
+    "Shadow-Archive/src/assets/tailscale.png",
+    "Shadow-Archive/src/assets/ssh.jpg",
+    "2025-06-15.md",
+    "_templates/Blog.md",
+    "_templates/CyberSec.md",
+    "_templates/Daily Log.md",
+    "_templates/Write-Ups.md",
+    "Shadow-Archive/src/content/notes/04_Offensive/2) WiFi Cracking.md",
+    "Shadow-Archive/src/assets/nmap.png",
+    "Shadow-Archive/src/content/notes/03_Linux/3) GPG.md",
+    "Shadow-Archive/src/content/notes/03_Linux/2) Git.md",
+    "Shadow-Archive/src/content/notes/05_Home-Lab/1) Lab Overview.md",
+    "Shadow-Archive/tsconfig.json",
+    "Shadow-Archive/src/styles/global.css",
+    "Shadow-Archive/src/styles",
+    "Shadow-Archive/src/pages/writeups/[...slug].astro",
+    "Shadow-Archive/src/pages/projects/index.astro",
+    "Shadow-Archive/src/pages/projects/[...slug].astro",
+    "Shadow-Archive/src/pages/notes/index.astro",
+    "Shadow-Archive/src/pages/notes/[...slug].astro",
+    "Shadow-Archive/src/pages/writeups",
+    "Shadow-Archive/src/pages/rss.xml.js",
+    "Shadow-Archive/src/content/writeups/PicoCTF/Test.md",
+    "Shadow-Archive/src/content/writeups/HackMyVM/Todd.md",
+    "Shadow-Archive/src/content/writeups/HTB/Test.md",
+    "Shadow-Archive/src/content/notes/06_To-Sort/Upgrading Shell.md",
+    "Shadow-Archive/src/content/notes/06_To-Sort/HoneyPot.md",
+    "Shadow-Archive/src/content/notes/06_To-Sort/BIOS_flashing.md",
+    "Shadow-Archive/src/content/notes/05_Home-Lab/5) Fedora Server.md",
+    "Shadow-Archive/src/content/notes/05_Home-Lab/4) BlackArch.md",
+    "Shadow-Archive/src/content/notes/05_Home-Lab/3) Arch.md",
+    "Shadow-Archive/src/content/notes/05_Home-Lab/2) OpnSense.md",
+    "Shadow-Archive/src/content/notes/03_Linux/ssh.md",
+    "Shadow-Archive/src/assets/wifi.png",
+    "Shadow-Archive/src/assets/virtualbox.jpg",
+    "Shadow-Archive/src/assets/tree.png",
+    "Shadow-Archive/src/assets/to-sort.jpg",
+    "Shadow-Archive/src/assets/teams.png",
+    "Shadow-Archive/src/assets/star.png",
+    "Shadow-Archive/src/assets/ssh.png",
+    "Untitled.canvas"
+  ]
+}

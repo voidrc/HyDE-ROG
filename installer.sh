@@ -34,6 +34,33 @@ echo "--> Upgrading to HyDE-ROG"
 ./Extra/manager.sh rmp bloatware.lst
 ./Extra/manager.sh ins pkg.lst
 
+## Add flathub repository && packages
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+./Extra/manager.sh fltk flatpak.lst
+
+## Flatpak Tweaks (themes, icons, env)
+echo "--> Applying Flatpak tweaks (themes, icons, environment)"
+
+# Remove unused flatpaks
+echo "    Removing unused Flatpak packages..."
+flatpak remove --unused || true
+
+# Get current GTK and icon theme
+gtkTheme=$(gsettings get org.gnome.desktop.interface gtk-theme | sed "s/'//g")
+gtkIcon=$(gsettings get org.gnome.desktop.interface icon-theme | sed "s/'//g")
+
+# Set Flatpak overrides for themes and icons
+echo "    Setting Flatpak filesystem overrides for themes and icons..."
+flatpak --user override --filesystem=$HOME/.themes
+flatpak --user override --filesystem=$HOME/.icons
+flatpak --user override --filesystem=$HOME/.local/share/themes
+flatpak --user override --filesystem=$HOME/.local/share/icons
+
+# Set Flatpak environment variables for GTK and icon theme
+echo "    Setting Flatpak GTK and icon theme environment variables..."
+flatpak --user override --env=GTK_THEME=${gtkTheme}
+flatpak --user override --env=ICON_THEME=${gtkIcon}
+
 ## Ask to install NvChad
 read -p "Do you want to install NvChad? (y/n): " install_nvchad
 if [[ "$install_nvchad" == "y" ]]; then
@@ -62,10 +89,8 @@ read -p "Do you want to recover workspace? (y/n): " recover_workspace
 if [[ "$recover_workspace" == "y" ]]; then
     ./Extra/workspace.sh
 else
-    echo "--> Skipping ROG specific installation."
+    echo "--> Skipping Workspace restoration"
 fi
-
-
 
 ## Ask to recover personal data
 read -p "Do you want to recover personal data? (y/n): " recover_personal_data
