@@ -1,7 +1,23 @@
 #!/usr/bin/env bash
 
-# Get id of an active window
-active_class=$(hyprctl activewindow | awk -F': ' '/class:/ {print $2}')
+# Get PID of the active window
+active_pid=$(hyprctl activewindow | awk -F': ' '/pid:/ {print $2}')
 
-# Close active window
-killall 9 $active_class
+# Find the top-most parent process (the main app)
+main_pid=$(
+    pid=$active_pid
+    while true; do
+        ppid=$(ps -o ppid= -p "$pid" | tr -d ' ')
+        if [ "$ppid" -eq 1 ] || [ -z "$ppid" ]; then
+            echo "$pid"
+            break
+        fi
+        pid=$ppid
+    done
+)
+
+# Get the process name of the main process
+main_process=$(ps -p "$main_pid" -o comm=)
+
+# Kill all processes with that name
+pkill "$main_process"
