@@ -26,8 +26,7 @@ echo "--> Cloning HyDE repository"
 git clone --depth 1 https://github.com/HyDE-Project/HyDE
 
 echo "--> Running install script"
-cd ./HyDE/Scripts
-./install.sh
+./HyDE/Scripts/install.sh
 
 echo "--> Upgrading to HyDE-ROG"
 ./Extra/manager.sh rmt trash.lst
