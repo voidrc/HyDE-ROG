@@ -97,3 +97,5 @@ if [[ "$recover_personal_data" == "y" ]]; then
 else
     echo "--> Skipping personal data recovery."
 fi
+
+hydectl reload
