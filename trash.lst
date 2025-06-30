@@ -9,7 +9,4 @@
 ~/.config/hypr/keybindings.conf
 ~/.config/hyde/wallbash/always/discord.dcol
 ~/.config/spotify-flags.conf
-~/.config/nvim
-~/.local/state/nvim
-~/.local/share/nvim
 ~/.local/lib/hyde/fastfetch.sh

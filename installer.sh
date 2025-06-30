@@ -29,7 +29,7 @@ echo "--> Running install script"
 ./HyDE/Scripts/install.sh
 
 echo "--> Upgrading to HyDE-ROG"
-./Extra/manager.sh rmt trash.lst
+
 ./Extra/manager.sh rmp bloatware.lst
 ./Extra/manager.sh ins pkg.lst
 
@@ -63,12 +63,11 @@ flatpak --user override --env=ICON_THEME=${gtkIcon}
 read -p "Do you want to install NvChad? (y/n): " install_nvchad
 if [[ "$install_nvchad" == "y" ]]; then
     echo "--> Installing NvChad"
-    if [[ -d "$HOME/.config/nvim" ]]; then
-        echo "--> ~/.config/nvim already exists, skipping NvChad clone."
-    else
-        git clone https://github.com/NvChad/starter "$HOME/.config/nvim"
-        nvim || echo "Warning: nvim failed to launch."
-    fi
+    rm -rf ~/.config/nvim
+    rm -rf ~/.local/state/nvim
+    rm -rf ~/.local/share/nvim
+    git clone https://github.com/NvChad/starter "$HOME/.config/nvim"
+    nvim || echo "Warning: nvim failed to launch."
 else
     echo "--> Skipping NvChad installation."
 fi
@@ -85,6 +84,7 @@ fi
 ## Ask to recover workspace
 read -p "Do you want to recover workspace? (y/n): " recover_workspace
 if [[ "$recover_workspace" == "y" ]]; then
+    ./Extra/manager.sh rmt trash.lst
     ./Extra/workspace.sh
 else
     echo "--> Skipping Workspace restoration"
