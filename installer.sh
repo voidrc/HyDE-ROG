@@ -35,7 +35,6 @@ echo "--> Upgrading to HyDE-ROG"
 
 ## Add flathub repository && packages
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-./Extra/manager.sh fltk flatpak.lst
 
 ## Flatpak Tweaks (themes, icons, env)
 echo "--> Applying Flatpak tweaks (themes, icons, environment)"
