@@ -1,6 +1,7 @@
 bat
 btop
 duf
+flatpak
 neovim
 vscodium
 youtube-dl-git
@@ -21,4 +22,3 @@ age
 tar
 zstd
 rsync
-flatpak
