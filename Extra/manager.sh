@@ -3,7 +3,7 @@
 set -euo pipefail
 
 usage() {
-    echo "Usage: $0 [rmt|rmb|ins|sys|fltk] <listfile>"
+    echo "Usage: $0 [rmt|rmp|ins|sys|fltk] <listfile>"
     exit 1
 }
 
@@ -36,7 +36,7 @@ case "$MODE" in
             rm -rf "$trash"
         done < "$LISTFILE"
         ;;
-    rmb)
+    rmp)
         while IFS= read -r bloat; do
             [[ -z "$bloat" || "$bloat" =~ ^# ]] && continue
             echo "[*] Removing $bloat"
